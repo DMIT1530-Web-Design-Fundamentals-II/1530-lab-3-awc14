@@ -1,4 +1,6 @@
-/* NOTE: Make sure that when you complete your Lab, you leave a comment at the top of this file listing which new properties you used! */
+/* '::before' psuedo element was used to create an animation effect for the Register Now button.
+   'transform' was used to animate the buttons psuedo element.
+   'transition' was used to animate show smoothly  */
 
 :root {
   --dk-grey: #263238;
@@ -6,4 +8,232 @@
   --yellow: #FDD835;
   --green: #8BC34A;
   --white: #FAFAFA;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--white);
+  background: url('../img/crowd-background.webp') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--dk-grey);
+  padding: 10px 20px;
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.inner-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-wrapper {
+  position: absolute;
+  left: 150px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.e {
+  color: var(--hot-pink);
+  font-weight: 700;
+}
+
+.sports {
+  color: var(--white);
+  font-weight: 700;
+}
+
+/* Menu Styles */
+nav {
+  position: relative;
+}
+
+.main-menu {
+  list-style: none;
+  display: flex;
+  gap: 200px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.main-menu > li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.main-menu a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.main-menu .chevron {
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+}
+
+.main-menu .dropdown {
+  display: none;
+  position: absolute;
+  background-color: var(--dk-grey);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  width: 200px;
+}
+
+.main-menu .dropdown a {
+  color: var(--white);
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.main-menu .dropdown a:hover {
+  background-color: var(--hot-pink);
+}
+
+.main-menu li:hover .dropdown {
+  display: block;
+}
+
+/* Main Content Styles */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+}
+
+.cta-box {
+  background-color: var(--white);
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  height: 350px;
+}
+
+.cta-box h2 {
+  font-size: 2em;
+  color: var(--dk-grey);
+}
+
+.cta-box .e {
+  color: var(--hot-pink);
+}
+
+.cta-box .sports {
+  color: #000;
+}
+
+.cta-box p {
+  color: #000;
+  margin: 20px 0;
+  font-size: 1.2em;
+}
+
+.cta-button {
+  background: linear-gradient(to right, var(--hot-pink), var(--yellow));
+  color: var(--white);
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.5s;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.cta-button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.cta-button span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile View Styles */
+@media (max-width: 950px) {
+  header {
+    padding: 40px 20px;
+  }
+  .main-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .main-menu.active {
+    display: flex;
+  }
+
+  .main-menu .dropdown {
+    position: static;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: auto;
+  }
+
+  header {
+    padding: 40px 20px;
+  }
 }

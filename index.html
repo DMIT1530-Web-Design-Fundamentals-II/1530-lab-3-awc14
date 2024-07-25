@@ -7,8 +7,8 @@
     <title>Lab 03</title>
 
     <!-- Meta Tags -->
-    <meta name="author" content="...">
-    <meta name="description" content="...">
+    <meta name="author" content="Abdulwaseh Cheema">
+    <meta name="description" content="Toggle navigation with drop-down menu">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
@@ -20,7 +20,64 @@
 </head>
 
 <body>
-    
+    <header>
+        <div class="inner-container wide-flex">
+            <div class="flex-container">
+                <div class="logo-wrapper">
+                    <h1>
+                        <span class="e">e</span><span class="sports">Sports</span>
+                    </h1>
+                </div>
+                <div class="menu-icon">
+                    <img src="img/joystick-logo.svg" alt="Menu Icon">
+                </div>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li>
+                        <img src="img/pink-circle.svg" alt="Pink Circle" class="icon">
+                        <a href="#">Games <img src="img/down-chevron.svg" alt="Down Chevron" class="chevron"></a>
+                        <ul class="dropdown">
+                            <li><a href="#">CS:GO</a></li>
+                            <li><a href="#">DOTA 2</a></li>
+                            <li><a href="#">Fortnite</a></li>
+                            <li><a href="#">League of Legends</a></li>
+                            <li><a href="#">Overwatch</a></li>
+                            <li><a href="#">Pokémon</a></li>
+                            <li><a href="#">PUBG</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="img/yellow-circle.svg" alt="Yellow Circle" class="icon">
+                        <a href="#">Schedule <img src="img/down-chevron.svg" alt="Down Chevron" class="chevron"></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Australia & EU</a></li>
+                            <li><a href="#">East Asia</a></li>
+                            <li><a href="#">North America</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="img/green-circle.svg" alt="Green Circle" class="icon">
+                        <a href="#">Register <img src="img/down-chevron.svg" alt="Down Chevron" class="chevron"></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Individual Competitors</a></li>
+                            <li><a href="#">Team Events</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="main-content">
+            <div class="cta-box">
+                <h2><span class="e">e</span><span class="sports">Sports</span> League</h2>
+                <p>Get your head in the game! Register as an individual competitor or for a team event in an upcoming tournament near you.</p>
+                <a href="#" class="cta-button">Register Now</a>
+            </div>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
